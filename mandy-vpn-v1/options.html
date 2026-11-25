@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mandy VPN Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options-page">
+  <main class="options-wrap">
+    <header class="brand">
+      <div class="logo">M</div>
+      <div><h1>MANDY <span>VPN</span></h1><p>CONNECTION SETTINGS</p></div>
+    </header>
+    <section class="settings-card">
+      <h2>Proxy server</h2>
+      <p class="intro">Connect Mandy VPN to an HTTPS forward-proxy server that you operate or are authorized to use.</p>
+      <label for="host">Server hostname</label>
+      <input id="host" type="text" placeholder="proxy.example.com" autocomplete="off">
+      <label for="port">Port</label>
+      <input id="port" type="number" min="1" max="65535" value="443">
+      <label for="country">Displayed location</label>
+      <select id="country">
+        <option>Canada</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Germany</option>
+        <option>France</option>
+        <option>Japan</option>
+        <option>Australia</option>
+        <option>Netherlands</option>
+        <option>Singapore</option>
+      </select>
+      <button id="save" class="save-button">Save settings</button>
+      <p id="feedback" class="feedback" role="status"></p>
+    </section>
+    <aside class="warning">
+      <strong>Important</strong>
+      <p>This starter build only configures Chrome to use an HTTPS proxy. It is not a complete VPN tunnel, does not provide a kill switch, and cannot confirm that the proxy is reachable or that your traffic is protected. The selected country is a label only; the server must actually be located there.</p>
+      <p>Do not use an unknown or public proxy. Before public release, add a properly secured backend, authentication, DNS/WebRTC leak testing, failure handling, and an independently reviewed privacy policy.</p>
+    </aside>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
